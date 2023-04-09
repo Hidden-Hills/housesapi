@@ -5,4 +5,6 @@ from .serializers import HouseSerializer
 class HouseViewSet(viewsets.ModelViewSet):
     queryset = House.objects.all().order_by('title')
     serializer_class = HouseSerializer
+    http_method_names = ['get', 'head']
+
 
